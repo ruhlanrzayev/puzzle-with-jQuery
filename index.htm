@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="@ruhlanrzayev" />
+    <meta name="description" content="Puzzle Game" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Puzzle Game with jQuery</title>
+
+    <!-- jQuery Libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #3333331e;
+            user-select: none;
+            overflow: hidden;
+        }
+
+        #finishModal h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        #finishModal p {
+            font-size: 1.2em;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Main Container -->
+    <div id="game">
+        <select id="selectDif" name="Select Difficulty">
+            <option value="Beginner" selected="selected">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+            <option value="Extreme">Extreme</option>
+        </select>
+        <button id="helpBtn">Help</button>
+    </div>
+
+    <!-- Finish Game Container -->
+    <div id="overlay"></div>
+    <div id="finishModal">
+        <h2>Congratulations, you finished!</h2>
+        <p id="finishTime"></p>
+        <p id="finishDifficulty"></p>
+        <button id="playAgain">Play Again</button>
+    </div>
+
+    <script src="query.js"></script>
+</body>
+</html>
